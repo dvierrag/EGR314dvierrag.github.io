@@ -11,23 +11,26 @@ as part of<br>
 for<br>
 <font size= "5"> Team 304 </font><br>
 
-**Submission: month, DD, YYYY**
+**Submission: March, 6, 2026**
 </center>
 
 ## Introduction
 
-* **This needs to be updated so that a reader gets an idea of the purpose of this datasheet.**
+This datasheet describes the hardware and microcontroller used for the door sensor monitoring system. The system uses an ESP32-S3 microcontroller to detect the state of a door sensor and transmit the information through WiFi. The purpose of this document is to provide technical information about the controller, supporting components, and electrical characteristics used in the design. It also includes references to the datasheets, power requirements, interfaces, and peripheral capabilities used in the project.
 
-### Project Summary
 
-* This needs to be updated to reflect <ins>your version</ins> of the team project, so when shared not via the team's report, the reader gets an idea of the direction of the project and how your work will contribute to the overall success.
-* Add context that ties into the link to your [team report.](https://egr314-s-2026-304.github.io/)
+## Project Summary
 
-### My Contribution
+The goal of this project is to design a smart door monitoring system that detects when a door or window is opened or closed and sends that information wirelessly. The system uses an ESP32-S3 module because it provides built in WiFi, multiple GPIO pins, ADC inputs, PWM outputs, and communication interfaces such as UART, SPI, and I2C. These features allow the microcontroller to interface with sensors and communicate with external systems.
 
-* This needs to be updated to reflect a team introduction
-* Content should also help an unfamiliar reader navigate to areas of interest. Information like:
+The project focuses on creating a reliable embedded system that can monitor the sensor state, process the signal using the microcontroller, and send the data through a wireless connection. The datasheet provides the electrical specifications, peripheral usage, and component information required to build the system.
 
-To review the details listed of the material used to construct the subsection, you can review it in the ["BOM"](https://embedded-systems-design.github.io/EGR314DataSheetTemplate/04-BOM/BOM/) section of the datasheet.
 
->Continue for all the remaining/missing sections.
+## My Contribution
+
+My contribution to the project focuses on the controller selection, circuit design, and hardware documentation for the ESP32-S3 based subsystem. I selected the ESP32-S3-WROOM-1-N4 module due to its integrated WiFi capabilities, processing power, and wide range of available peripherals.
+
+I am responsible for designing the microcontroller interface circuitry, selecting the required supporting components, and documenting the electrical characteristics of the system. This includes creating the controller specification table, identifying the required communication interfaces, and preparing the bill of materials for the microcontroller subsystem.
+
+Additional details about the components used in the design can be found in the **BOM section** of the datasheet.
+
