@@ -2,21 +2,28 @@
 title: Reflection
 ---
 
-## Review of Module's Sucess
+## Review of Module's Success
 
-dfgh
+Overall, the module was successful in meeting the main design goals. The ESP32-S3-WROOM-1 was able to provide the processing power and wireless communication needed for the subsystem. The PCB layout was completed in KiCad and included the required power regulation, connectors, and routing for communication signals. The board design also included proper placement of components and a keep-out region for the ESP32 antenna to support reliable WiFi operation. 
+
+The power system using the AMS1117 regulator was able to provide a stable 3.3V supply for the ESP32 module and supporting components. Throughout the design process, schematic development, PCB routing, and design rule checks helped ensure the board could realistically be manufactured and assembled.
 
 ## Version 2.0
 
-dfghj
+If the design were to be improved in a future version, several changes could be made. One improvement would be using a switching regulator instead of a linear regulator to improve efficiency and reduce heat when higher input voltages are used. Another improvement would be optimizing the PCB layout further to shorten signal traces and improve routing organization.
+
+Additional connectors could also be added to make it easier to connect external sensors or other subsystems. Expanding the communication interfaces such as SPI or I2C could allow the system to support more devices in the future.
 
 ## Lessons Learned
 
-1. ghj
-2. ghds
+1. Careful schematic planning makes the PCB design process much easier later on.
+2. Running design rule checks frequently helps catch mistakes early before routing becomes complicated.
+3. Component placement has a big impact on how easy the board is to route.
+4. Power supply design is important for microcontrollers like the ESP32 that can draw higher current during wireless communication.
 
 ## Recommendations for Future Students
 
-1. sfev
-2. sfvvf
-3. 
+1. Start the schematic early and verify all component footprints before beginning the PCB layout.
+2. Leave enough space around modules like the ESP32 that require antenna keep-out regions.
+3. Run ERC and DRC checks often while designing to avoid large numbers of errors later.
+4. Keep traces organized and avoid unnecessary crossings to make the layout cleaner and easier to debug.
