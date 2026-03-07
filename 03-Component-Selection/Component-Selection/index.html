@@ -630,6 +630,15 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#communication-interface-to-telescope-controller_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Communication Interface to Telescope Controller
+    </span>
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -860,6 +869,15 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#communication-interface-to-telescope-controller_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Communication Interface to Telescope Controller
+    </span>
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -912,43 +930,47 @@
 </table>
 <p><strong>Rationale:</strong> The ESP32-S3 WiFi module can draw up to ~330mA during transmit bursts. Designing for 500mA plus a 25 percent safety margin requires at least 0.66A capacity. A 1A buck regulator provides sufficient electrical and thermal headroom while maintaining efficiency. Compared to an LDO, this solution reduces heat and improves rail stability during WiFi activity.</p>
 <h3 id="microcontroller-wifi-module">Microcontroller / WiFi Module</h3>
-<p><em>Table 2: WiFi Compute Module Selection</em></p>
+<p><strong>Table 2: WiFi Compute Module Selection</strong></p>
 <table>
 <thead>
 <tr>
-<th><strong>Component</strong></th>
-<th><strong>Pros</strong></th>
-<th><strong>Cons</strong></th>
+<th>Component</th>
+<th>Pros</th>
+<th>Cons</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="https://github.com/user-attachments/assets/2357efa5-4d25-429a-a8c1-f5729d65cfb6" data-desc-position="bottom"><img width="200" height="200" alt="image" src="https://github.com/user-attachments/assets/2357efa5-4d25-429a-a8c1-f5729d65cfb6"></a> <br>ESP32-S3-WROOM-1-N4r<br>$5.06 each<br><a href="https://www.digikey.com/en/products/detail/espressif-systems/ESP32-S3-WROOM-1-N4/16162639?utm_source=chatgpt.com">link to product</a></td>
-<td>* Integrated WiFi and Bluetooth LE<br>* 1A output capability provides margin above 0.66A required<br>* Handles ESP32 WiFi transmit burst current safely <br>* Reduced heat compared to LDO</td>
-<td>* High peak current during WiFi transmission<br>* Requires antenna keep-out PCB region<br>* Requires robust 3.3V power design</td>
+<td><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="https://github.com/user-attachments/assets/e81cb26b-062b-47e2-86ba-59332f8d16fc" data-desc-position="bottom"><img width="200" height="200" alt="image" src="https://github.com/user-attachments/assets/e81cb26b-062b-47e2-86ba-59332f8d16fc"></a><br>ESP32-S3-WROOM-1-N4R2<br>$5.06 each<br><a href="https://www.digikey.com/en/products/detail/espressif-systems/ESP32-S3-WROOM-1-N4R2/16162643?utm_source=chatgpt.com">link to product</a></td>
+<td>* Integrated WiFi and Bluetooth LE<br><em> Combines microcontroller and wireless communication in one module<br></em> Reduces PCB design complexity<br><em> Supports UART, SPI, and I2C communication interfaces<br></em> Large development ecosystem</td>
+<td>* High peak current during WiFi transmission<br><em> Requires antenna keep-out region on PCB<br></em> Requires stable 3.3V power supply</td>
 </tr>
 </tbody>
 </table>
-<p><strong>Rationale:</strong> The ESP32-S3-WROOM-1-N4 was selected because it integrates wireless communication and processing into a single certified surface mount module. This reduces integration risk, minimizes board space, and simplifies firmware compared to using a PIC with an external WiFi radio. It provides sufficient GPIO and communication interfaces for UART, SPI, and I2C subsystem coordination.</p>
+<p><strong>Rationale:</strong><br>
+The ESP32-S3-WROOM-1 module was selected as the main controller and wireless communication interface for the subsystem. It integrates processing capability and WiFi connectivity into a single surface-mount module. This reduces system complexity, saves PCB space, and simplifies firmware development while providing multiple communication interfaces for integration with external devices.</p>
 <h3 id="communication-interface-to-telescope-controller">Communication Interface to Telescope Controller</h3>
 <p><em>Table 3: Inter-Subsystem Communication</em></p>
+<h3 id="communication-interface-to-telescope-controller_1">Communication Interface to Telescope Controller</h3>
+<p><strong>Table 3: Inter-Subsystem Communication</strong></p>
 <table>
 <thead>
 <tr>
-<th><strong>Component</strong></th>
-<th><strong>Pros</strong></th>
-<th><strong>Cons</strong></th>
+<th>Component</th>
+<th>Pros</th>
+<th>Cons</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="https://github.com/user-attachments/assets/aeb0d15f-7be6-4e72-be5c-c3d6967dc25d" data-desc-position="bottom"><img width="200" height="200" alt="image" src="https://github.com/user-attachments/assets/aeb0d15f-7be6-4e72-be5c-c3d6967dc25d"></a>&gt; <br>ESP32-S3-WROOM-1 UART Interface<br>$15 each<br><a href="https://www.digikey.com/en/products/detail/espressif-systems/ESP32-S3-DEVKITC-1-N8R8/15295894?gclsrc=aw.ds&amp;gad_source=1&amp;gad_campaignid=20243136172&amp;gclid=Cj0KCQiA7rDMBhCjARIsAGDBuEAZsZZ5mP-KZ28V1nJSp50fG-HfMVz22OIJQpd5z0FkEwOMi1zYkvkaAnhQEALw_wcB">link to product</a></td>
-<td>* No additional hardware required<br>*Minimal PCB space<br>* Easy debugging with serial monitory<br>*Reliable for command and status exchange</td>
-<td>*Lower bandwidth than SPI<br>* Point-to-point only</td>
+<td><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="https://github.com/user-attachments/assets/b9246716-b9bb-468c-a3e5-59f7d7faf318" data-desc-position="bottom"><img width="200" height="200" alt="image" src="https://github.com/user-attachments/assets/b9246716-b9bb-468c-a3e5-59f7d7faf318"></a><br>ESP32-S3-WROOM-1 UART Interface<br>Integrated in ESP32 module<br><a href="https://www.digikey.com/en/products/detail/espressif-systems/ESP32-S3-WROOM-1-N4R2/16162643">link to product</a></td>
+<td>* No additional hardware required<br><em> Minimal PCB space<br></em> Easy debugging using serial monitor<br>* Reliable for command and status communication</td>
+<td>* Lower bandwidth compared to SPI<br>* Point-to-point communication only</td>
 </tr>
 </tbody>
 </table>
-<p><strong>Rationale:</strong> UART was selected for communication between the WiFi subsystem and the main telescope controller because it minimizes hardware complexity, requires only two signal lines, and supports straightforward debugging during system integration.</p>
+<p><strong>Rationale:</strong><br>
+UART was selected as the communication interface between the ESP32 WiFi subsystem and the telescope controller. The interface requires only two signal lines, TX and RX, which simplifies PCB routing and reduces hardware complexity. UART also allows straightforward debugging and monitoring of system data during development and integration.</p>
 <hr>
 
 
