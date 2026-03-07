@@ -16,4 +16,5 @@ To get some initial formatting help, one can view ["here"](https://embedded-syst
 ## Example Block Diagram 
 Showing an example of how to import a screenshot of the block diagram created outside of git and brought into a page.
 
-<img width="682" height="652" alt="Block Diagram drawio" src="https://github.com/user-attachments/assets/eb41f447-2614-44b4-8e0c-64bb6c3e625d" />
+
+<img width="682" height="652" alt="Block Diagram drawio" src="https://github.com/user-attachments/assets/b4e46c29-78bd-4bb9-a72a-017da6f5ca23" />
