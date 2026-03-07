@@ -33,11 +33,10 @@ The following sections describe the selected major components necessary for the 
 The ESP32-S3-WROOM-1 module was selected as the main controller and wireless communication interface for the subsystem. It integrates processing capability and WiFi connectivity into a single surface-mount module. This reduces system complexity, saves PCB space, and simplifies firmware development while providing multiple communication interfaces for integration with external devices.
 
 ### Communication Interface to Telescope Controller
-*Table 3: Inter-Subsystem Communication*
 
 
 
-### Communication Interface to Telescope Controller
+
 
 **Table 3: Inter-Subsystem Communication**
 
