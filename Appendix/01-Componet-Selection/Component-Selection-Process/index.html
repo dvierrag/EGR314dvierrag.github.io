@@ -26,7 +26,7 @@
 
     
       
-        <title>Appendix - Module's Major Components Selection Process - EGR 314 Data Sheet Template</title>
+        <title>Component Selection Process - EGR 314 Data Sheet Template</title>
       
     
     
@@ -125,7 +125,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Appendix - Module's Major Components Selection Process
+              Component Selection Process
             
           </span>
         </div>
@@ -765,7 +765,7 @@
           
   
   <span class="md-ellipsis">
-    Appendix - Module's Major Components Selection Process
+    Component Selection Process
   </span>
   
 
@@ -776,7 +776,7 @@
         
   
   <span class="md-ellipsis">
-    Appendix - Module's Major Components Selection Process
+    Component Selection Process
   </span>
   
 
@@ -815,36 +815,9 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#sensor" class="md-nav__link">
+  <a href="#microcontroller-wifi-module" class="md-nav__link">
     <span class="md-ellipsis">
-      Sensor
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#actuator" class="md-nav__link">
-    <span class="md-ellipsis">
-      Actuator
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#style-1" class="md-nav__link">
-    <span class="md-ellipsis">
-      Style 1
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#style-2" class="md-nav__link">
-    <span class="md-ellipsis">
-      Style 2
+      Microcontroller / WiFi Module
     </span>
   </a>
   
@@ -1019,36 +992,9 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#sensor" class="md-nav__link">
+  <a href="#microcontroller-wifi-module" class="md-nav__link">
     <span class="md-ellipsis">
-      Sensor
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#actuator" class="md-nav__link">
-    <span class="md-ellipsis">
-      Actuator
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#style-1" class="md-nav__link">
-    <span class="md-ellipsis">
-      Style 1
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#style-2" class="md-nav__link">
-    <span class="md-ellipsis">
-      Style 2
+      Microcontroller / WiFi Module
     </span>
   </a>
   
@@ -1082,129 +1028,137 @@
   
 
 
-  <h1>Appendix - Module's Major Components Selection Process</h1>
+  <h1>Component Selection Process</h1>
 
 <h2 id="modules-major-components-selection-process">Module's Major Components Selection Process</h2>
-<blockquote>
-<p><strong>For each of the following sections, use <ins>one of the two styles</ins> given near the end. <em>REMOVE THIS NOTE</em></strong></p>
-</blockquote>
 <h3 id="power-management">Power Management</h3>
-<p>(<strong>remove this note/placeholder</strong>: this is where your 3.3 volt switching regulator, any other needed power regulator, and power source {if applicable})</p>
-<h3 id="sensor">Sensor</h3>
-<p>(<strong>remove this note/placeholder</strong>: if applicable, this is where your go through the sensor selection process, otherwise, remove this section.)</p>
-<h3 id="actuator">Actuator</h3>
-<p>(<strong>remove this note/placeholder</strong>: if applicable, this is where your go through the motor selection process which includes both the driver and motor, otherwise, remove this section.)</p>
-<hr>
-<blockquote>
-<p>Remove the following before submitting!</p>
-</blockquote>
-<h3 id="style-1">Style 1</h3>
-<blockquote>
-<p>This is the example found in the assignment, uses more html</p>
-</blockquote>
-<p><em>Table 1: Example component selection</em></p>
-<p><strong>External Clock Module</strong></p>
-<table>
-<thead>
-<tr>
-<th><strong>Solution</strong></th>
-<th><strong>Pros</strong></th>
-<th><strong>Cons</strong></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../image1.png" data-desc-position="bottom"><img alt="" src="../image1.png"></a><br>Option 1.<br> XC1259TR-ND surface mount crystal<br>$1/each<br><a href="http://www.digikey.com/product-detail/en/ECS-40.3-S-5PX-TR/XC1259TR-ND/827366">link to product</a></td>
-<td>* Inexpensive[^1]<br>* Compatible with PSoC<br>* Meets surface mount constraint of project</td>
-<td>* Requires external components and support circuitry for interface<br>* Needs special PCB layout.</td>
-</tr>
-<tr>
-<td><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../image3.png" data-desc-position="bottom"><img alt="" src="../image3.png"></a><br>* Option 2. <br>* CTX936TR-ND surface mount oscillator <br>* $1/each <br>* <a href="http://www.digikey.com/product-detail/en/636L3I001M84320/CTX936TR-ND/2292940">Link to product</a></td>
-<td>* Outputs a square wave <br>* Stable over operating temperature <br> * Direct interface with PSoC (no external circuitry required) range</td>
-<td>* More expensive <br>* Slow shipping speed</td>
-</tr>
-</tbody>
-</table>
-<p><strong>Choice:</strong> Option 2: CTX936TR-ND surface mount oscillator</p>
-<p><strong>Rationale:</strong> A clock oscillator is easier to work with because it requires no external circuitry in order to interface with the PSoC. This is particularly important because we are not sure of the electrical characteristics of the PCB, which could affect the oscillation of a crystal. While the shipping speed is slow, according to the website if we order this week it will arrive within 3 weeks.</p>
-<h3 id="style-2">Style 2</h3>
-<blockquote>
-<p>Also acceptable, more markdown friendly</p>
-</blockquote>
-<p><strong>External Clock Module</strong></p>
 <ol>
-<li>
-<p>XC1259TR-ND surface mount crystal</p>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../image1.png" data-desc-position="bottom"><img alt="" src="../image1.png"></a></p>
-<ul>
-<li>$1/each</li>
-<li><a href="http://www.digikey.com/product-detail/en/ECS-40.3-S-5PX-TR/XC1259TR-ND/827366">link to product</a></li>
-</ul>
-<table>
-<thead>
-<tr>
-<th>Pros</th>
-<th>Cons</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Inexpensive</td>
-<td>Requires external components and support circuitry for interface</td>
-</tr>
-<tr>
-<td>Compatible with PSoC</td>
-<td>Needs special PCB layout.</td>
-</tr>
-<tr>
-<td>Meets surface mount constraint of project</td>
-<td></td>
-</tr>
-</tbody>
-</table>
-</li>
-<li>
-<p>CTX936TR-ND surface mount oscillator</p>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../image3.png" data-desc-position="bottom"><img alt="" src="../image3.png"></a></p>
-<ul>
-<li>$1/each</li>
-<li><a href="http://www.digikey.com/product-detail/en/636L3I001M84320/CTX936TR-ND/2292940">Link to product</a></li>
-</ul>
-<table>
-<thead>
-<tr>
-<th>Pros</th>
-<th>Cons</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Outputs a square wave</td>
-<td>More expensive</td>
-</tr>
-<tr>
-<td>Stable over operating temperature</td>
-<td>Slow shipping speed</td>
-</tr>
-<tr>
-<td>Direct interface with PSoC (no external circuitry required) range</td>
-<td></td>
-</tr>
-</tbody>
-</table>
-</li>
+<li>AMS1117-3.3 Linear Voltage Regulator</li>
 </ol>
-<p><strong>Choice:</strong> Option 2: CTX936TR-ND surface mount oscillator</p>
-<p><strong>Rationale:</strong> A clock oscillator is easier to work with because it requires no external circuitry in order to interface with the PSoC. This is particularly important because we are not sure of the electrical characteristics of the PCB, which could affect the oscillation of a crystal. While the shipping speed is slow, according to the website if we order this week it will arrive within 3 weeks.</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="https://github.com/user-attachments/assets/483f524a-cae2-4ca4-99ad-34c2309e0fa7" data-desc-position="bottom"><img width="200" height="200" alt="image" src="https://github.com/user-attachments/assets/483f524a-cae2-4ca4-99ad-34c2309e0fa7"></a></p>
+<ul>
+<li>$0.50 each<br>
+-<a href="https://www.digikey.com/en/products/detail/espressif-systems/ESP32-S3-WROOM-1-N4R2/16162643">link</a></li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>Pros</th>
+<th>Cons</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Simple design with minimal external components</td>
+<td>Lower efficiency compared to switching regulators</td>
+</tr>
+<tr>
+<td>Stable 3.3V output for ESP32</td>
+<td>Can generate heat if input voltage is high</td>
+</tr>
+<tr>
+<td>Low cost and widely available</td>
+<td>Limited current compared to switching regulators</td>
+</tr>
+</tbody>
+</table>
+<ol>
+<li>TPS62162 Buck Converter</li>
+</ol>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="https://github.com/user-attachments/assets/af68066c-cdb1-4a87-b838-1a191f027d5d" data-desc-position="bottom"><img width="200" height="200" alt="image" src="https://github.com/user-attachments/assets/af68066c-cdb1-4a87-b838-1a191f027d5d"></a></p>
+<ul>
+<li>$1.57 each<br>
+<a href="https://www.digikey.com/en/products/detail/umw/AMS1117-3-3/17635254">link</a></li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>Pros</th>
+<th>Cons</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Higher efficiency power conversion</td>
+<td>Requires inductor and more components</td>
+</tr>
+<tr>
+<td>Less heat generation</td>
+<td>More complex PCB layout</td>
+</tr>
+<tr>
+<td>Better for high current systems</td>
+<td>Slightly higher cost</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Choice:</strong> AMS1117-3.3 Linear Voltage Regulator  </p>
+<p><strong>Rationale:</strong> The AMS1117 was selected because it provides a simple and reliable way to generate the 3.3V rail required by the ESP32 module. The design only requires a few external capacitors and keeps the PCB layout simple. For this subsystem the efficiency loss compared to a switching regulator is acceptable.</p>
+<hr>
+<h3 id="microcontroller-wifi-module">Microcontroller / WiFi Module</h3>
+<ol>
+<li>ESP32-S3-WROOM-1</li>
+</ol>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="https://github.com/user-attachments/assets/4152952c-1517-43f5-b598-ac4206570d40" data-desc-position="bottom"><img width="200" height="200" alt="image" src="https://github.com/user-attachments/assets/4152952c-1517-43f5-b598-ac4206570d40"></a></p>
+<ul>
+<li>$5.06 each<br>
+-<a href="https://www.digikey.com/en/products/detail/espressif-systems/ESP32-S3-WROOM-1-N4R2/16162643">link</a></li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>Pros</th>
+<th>Cons</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Integrated WiFi and Bluetooth</td>
+<td>High peak current during WiFi transmission</td>
+</tr>
+<tr>
+<td>Combines MCU and wireless radio</td>
+<td>Requires antenna keep-out region</td>
+</tr>
+<tr>
+<td>Multiple communication interfaces (UART, SPI, I2C)</td>
+<td>Requires stable 3.3V power design</td>
+</tr>
+</tbody>
+</table>
+<ol>
+<li>PIC18F57Q43 + External WiFi Module</li>
+</ol>
+<table>
+<thead>
+<tr>
+<th>Pros</th>
+<th>Cons</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Flexible microcontroller architecture</td>
+<td>Requires external WiFi module</td>
+</tr>
+<tr>
+<td>Good for general embedded control</td>
+<td>More complex hardware design</td>
+</tr>
+<tr>
+<td>Large development ecosystem</td>
+<td>Larger PCB footprint</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Choice:</strong> ESP32-S3-WROOM-1  </p>
+<p><strong>Rationale:</strong> The ESP32-S3-WROOM-1 was selected because it integrates the microcontroller and WiFi communication in a single surface mount module. This reduces hardware complexity, saves PCB space, and simplifies firmware development while still providing multiple communication interfaces.</p>
 
 
 
 
 
 
-
-  
-  
 
 
 
