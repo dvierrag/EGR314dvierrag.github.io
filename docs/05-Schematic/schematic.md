@@ -13,7 +13,8 @@ This schematic is design to support .... (highlight functionally, power, and con
 
 **Figure 1:** Showing a example schematic.
 
-
+<img width="1503" height="1459" alt="image" src="https://github.com/user-attachments/assets/c46af999-d95f-41a1-acd8-d4668fef0399" />
+**Figure 2:** Showing what the PCB looks like 
 ## Resouces
 
-The schematic as a PDF download is available [*here*](https://github.com/user-attachments/files/25808715/EV.scope.pdf), and the Zip folder of the project [*here*](dummyZip.zip).
+The schematic as a PDF download is available [*here*](https://github.com/user-attachments/files/25808715/EV.scope.pdf), and the Zip folder of the project or for the PCB [*here*](https://github.com/user-attachments/files/25811397/Dylan304.zip).
