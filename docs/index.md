@@ -7,7 +7,7 @@ tags:
 <center>
 <font size= "6">Dylan Vierra-guillermo Datasheet</font><br>
 as part of<br>
-<font size= "8"> Project Name</font><br>
+<font size= "8"> Ev Scope</font><br>
 for<br>
 <font size= "5"> Team 304 </font><br>
 
@@ -32,5 +32,4 @@ My contribution to the project focuses on the controller selection, circuit desi
 
 I am responsible for designing the microcontroller interface circuitry, selecting the required supporting components, and documenting the electrical characteristics of the system. This includes creating the controller specification table, identifying the required communication interfaces, and preparing the bill of materials for the microcontroller subsystem.
 
-Additional details about the components used in the design can be found in the **BOM section** of the datasheet.
 
