@@ -18,6 +18,7 @@ As you can see, the text can be difficult to read without opening the image.
 
 ## Resouce
 
-The Bill of Material as a PDF download is available [*here*](https://github.com/user-attachments/files/25788819/esp32_wifi_bom.pdf).
+The Bill of Material as a PDF download is available [*here*](https://github.com/user-attachments/files/25811523/esp32_wifi_bom.2.pdf).
+
 
 
