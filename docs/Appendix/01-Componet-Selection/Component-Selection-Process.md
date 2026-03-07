@@ -1,75 +1,66 @@
----
-title: Appendix - Module's Major Components Selection Process
----
-
 ## Module's Major Components Selection Process
-
->**For each of the following sections, use <ins>one of the two styles</ins> given near the end. *REMOVE THIS NOTE***
 
 ### Power Management
 
-(**remove this note/placeholder**: this is where your 3.3 volt switching regulator, any other needed power regulator, and power source {if applicable})
+1. AMS1117-3.3 Linear Voltage Regulator
 
-### Sensor
+<img width="200" height="200" alt="image" src="https://github.com/user-attachments/assets/483f524a-cae2-4ca4-99ad-34c2309e0fa7" />
 
-(**remove this note/placeholder**: if applicable, this is where your go through the sensor selection process, otherwise, remove this section.)
 
-### Actuator
+- $0.50 each  
+-[link](https://www.digikey.com/en/products/detail/espressif-systems/ESP32-S3-WROOM-1-N4R2/16162643)
 
-(**remove this note/placeholder**: if applicable, this is where your go through the motor selection process which includes both the driver and motor, otherwise, remove this section.)
+| Pros | Cons |
+|-----|-----|
+| Simple design with minimal external components | Lower efficiency compared to switching regulators |
+| Stable 3.3V output for ESP32 | Can generate heat if input voltage is high |
+| Low cost and widely available | Limited current compared to switching regulators |
 
------------
-> Remove the following before submitting!
+2. TPS62162 Buck Converter
 
-### Style 1
+<img width="200" height="200" alt="image" src="https://github.com/user-attachments/assets/af68066c-cdb1-4a87-b838-1a191f027d5d" />
 
-> This is the example found in the assignment, uses more html
 
-*Table 1: Example component selection*
 
-**External Clock Module**
+- $1.57 each  
+[link](https://www.digikey.com/en/products/detail/umw/AMS1117-3-3/17635254)
 
-| **Solution**                                                                                                                                                                                    | **Pros**                                                                                                                                    | **Cons**                                                                                            |
-| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------- |
-| ![](image1.png)<br>Option 1.<br> XC1259TR-ND surface mount crystal<br>$1/each<br>[link to product](http://www.digikey.com/product-detail/en/ECS-40.3-S-5PX-TR/XC1259TR-ND/827366)                 | \* Inexpensive[^1]<br>\* Compatible with PSoC<br>\* Meets surface mount constraint of project                                               | \* Requires external components and support circuitry for interface<br>\* Needs special PCB layout. |
-| ![](image3.png)<br>\* Option 2. <br>\* CTX936TR-ND surface mount oscillator <br>\* $1/each <br>\* [Link to product](http://www.digikey.com/product-detail/en/636L3I001M84320/CTX936TR-ND/2292940) | \* Outputs a square wave <br>\* Stable over operating temperature <br> \* Direct interface with PSoC (no external circuitry required) range | * More expensive <br>\* Slow shipping speed                                                         |
+| Pros | Cons |
+|-----|-----|
+| Higher efficiency power conversion | Requires inductor and more components |
+| Less heat generation | More complex PCB layout |
+| Better for high current systems | Slightly higher cost |
 
-**Choice:** Option 2: CTX936TR-ND surface mount oscillator
+**Choice:** AMS1117-3.3 Linear Voltage Regulator  
 
-**Rationale:** A clock oscillator is easier to work with because it requires no external circuitry in order to interface with the PSoC. This is particularly important because we are not sure of the electrical characteristics of the PCB, which could affect the oscillation of a crystal. While the shipping speed is slow, according to the website if we order this week it will arrive within 3 weeks.
+**Rationale:** The AMS1117 was selected because it provides a simple and reliable way to generate the 3.3V rail required by the ESP32 module. The design only requires a few external capacitors and keeps the PCB layout simple. For this subsystem the efficiency loss compared to a switching regulator is acceptable.
 
-### Style 2
+---
 
-> Also acceptable, more markdown friendly
+### Microcontroller / WiFi Module
 
-**External Clock Module**
+1. ESP32-S3-WROOM-1
 
-1. XC1259TR-ND surface mount crystal
+<img width="200" height="200" alt="image" src="https://github.com/user-attachments/assets/4152952c-1517-43f5-b598-ac4206570d40" />
 
-    ![](image1.png)
 
-    * $1/each
-    * [link to product](http://www.digikey.com/product-detail/en/ECS-40.3-S-5PX-TR/XC1259TR-ND/827366)
+- $5.06 each  
+-[link](https://www.digikey.com/en/products/detail/espressif-systems/ESP32-S3-WROOM-1-N4R2/16162643)
 
-    | Pros                                      | Cons                                                             |
-    | ----------------------------------------- | ---------------------------------------------------------------- |
-    | Inexpensive                               | Requires external components and support circuitry for interface |
-    | Compatible with PSoC                      | Needs special PCB layout.                                        |
-    | Meets surface mount constraint of project |
+| Pros | Cons |
+|-----|-----|
+| Integrated WiFi and Bluetooth | High peak current during WiFi transmission |
+| Combines MCU and wireless radio | Requires antenna keep-out region |
+| Multiple communication interfaces (UART, SPI, I2C) | Requires stable 3.3V power design |
 
-1. CTX936TR-ND surface mount oscillator
+2. PIC18F57Q43 + External WiFi Module
 
-    ![](image3.png)
+| Pros | Cons |
+|-----|-----|
+| Flexible microcontroller architecture | Requires external WiFi module |
+| Good for general embedded control | More complex hardware design |
+| Large development ecosystem | Larger PCB footprint |
 
-    * $1/each
-    * [Link to product](http://www.digikey.com/product-detail/en/636L3I001M84320/CTX936TR-ND/2292940)
+**Choice:** ESP32-S3-WROOM-1  
 
-    | Pros                                                              | Cons                |
-    | ----------------------------------------------------------------- | ------------------- |
-    | Outputs a square wave                                             | More expensive      |
-    | Stable over operating temperature                                 | Slow shipping speed |
-    | Direct interface with PSoC (no external circuitry required) range |
-
-**Choice:** Option 2: CTX936TR-ND surface mount oscillator
-
-**Rationale:** A clock oscillator is easier to work with because it requires no external circuitry in order to interface with the PSoC. This is particularly important because we are not sure of the electrical characteristics of the PCB, which could affect the oscillation of a crystal. While the shipping speed is slow, according to the website if we order this week it will arrive within 3 weeks.
+**Rationale:** The ESP32-S3-WROOM-1 was selected because it integrates the microcontroller and WiFi communication in a single surface mount module. This reduces hardware complexity, saves PCB space, and simplifies firmware development while still providing multiple communication interfaces.
