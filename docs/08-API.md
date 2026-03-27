@@ -156,15 +156,3 @@ The sender:
 
 --------------------------------------------------
 
-## Submission
-
-- GitHub page URL
-- PDF export of this page
-
---------------------------------------------------
-
-IMPORTANT
-
-Before submitting:
-- Replace message_type values with your team’s actual values
-- Make sure this matches your team message table
