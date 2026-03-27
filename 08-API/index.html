@@ -1098,101 +1098,373 @@
 <h2 id="messages-received">Messages Received</h2>
 <h3 id="input-coordinates">Input Coordinates</h3>
 <p>Purpose: Receive target X and Y coordinates.</p>
-<p>Byte | Variable Name | Type | Min | Max | Example
-1 | message_type | uint8_t | 1 | 255 | 10
-2-3 | x_coord | int16_t | -1000 | 1000 | 120
-4-5 | y_coord | int16_t | -1000 | 1000 | -45</p>
+<table>
+<thead>
+<tr>
+<th>Byte</th>
+<th>Variable Name</th>
+<th>Type</th>
+<th>Min</th>
+<th>Max</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>message_type</td>
+<td>uint8_t</td>
+<td>1</td>
+<td>255</td>
+<td>10</td>
+</tr>
+<tr>
+<td>2-3</td>
+<td>x_coord</td>
+<td>int16_t</td>
+<td>-1000</td>
+<td>1000</td>
+<td>120</td>
+</tr>
+<tr>
+<td>4-5</td>
+<td>y_coord</td>
+<td>int16_t</td>
+<td>-1000</td>
+<td>1000</td>
+<td>-45</td>
+</tr>
+</tbody>
+</table>
 <p>Total Bytes: 5</p>
 <hr>
 <h3 id="turn-on-telescope">Turn On Telescope</h3>
 <p>Purpose: Enable telescope system.</p>
-<p>Byte | Variable Name | Type | Min | Max | Example
-1 | message_type | uint8_t | 1 | 255 | 12
-2 | power_enable | uint8_t | 0 | 1 | 1</p>
+<table>
+<thead>
+<tr>
+<th>Byte</th>
+<th>Variable Name</th>
+<th>Type</th>
+<th>Min</th>
+<th>Max</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>message_type</td>
+<td>uint8_t</td>
+<td>1</td>
+<td>255</td>
+<td>12</td>
+</tr>
+<tr>
+<td>2</td>
+<td>power_enable</td>
+<td>uint8_t</td>
+<td>0</td>
+<td>1</td>
+<td>1</td>
+</tr>
+</tbody>
+</table>
 <p>Total Bytes: 2</p>
 <hr>
 <h3 id="adjust-scope">Adjust Scope</h3>
 <p>Purpose: Adjust telescope position incrementally.</p>
-<p>Byte | Variable Name | Type | Min | Max | Example
-1 | message_type | uint8_t | 1 | 255 | 13
-2-3 | delta_x | int16_t | -500 | 500 | 15
-4-5 | delta_y | int16_t | -500 | 500 | -10</p>
+<table>
+<thead>
+<tr>
+<th>Byte</th>
+<th>Variable Name</th>
+<th>Type</th>
+<th>Min</th>
+<th>Max</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>message_type</td>
+<td>uint8_t</td>
+<td>1</td>
+<td>255</td>
+<td>13</td>
+</tr>
+<tr>
+<td>2-3</td>
+<td>delta_x</td>
+<td>int16_t</td>
+<td>-500</td>
+<td>500</td>
+<td>15</td>
+</tr>
+<tr>
+<td>4-5</td>
+<td>delta_y</td>
+<td>int16_t</td>
+<td>-500</td>
+<td>500</td>
+<td>-10</td>
+</tr>
+</tbody>
+</table>
 <p>Total Bytes: 5</p>
 <hr>
 <h3 id="refresh-data">Refresh Data</h3>
 <p>Purpose: Request periodic data update.</p>
-<p>Byte | Variable Name | Type | Min | Max | Example
-1 | message_type | uint8_t | 1 | 255 | 16
-2 | period_lsb | uint8_t | 0 | 255 | 232
-3 | period_msb | uint8_t | 0 | 255 | 3</p>
+<table>
+<thead>
+<tr>
+<th>Byte</th>
+<th>Variable Name</th>
+<th>Type</th>
+<th>Min</th>
+<th>Max</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>message_type</td>
+<td>uint8_t</td>
+<td>1</td>
+<td>255</td>
+<td>16</td>
+</tr>
+<tr>
+<td>2</td>
+<td>period_lsb</td>
+<td>uint8_t</td>
+<td>0</td>
+<td>255</td>
+<td>232</td>
+</tr>
+<tr>
+<td>3</td>
+<td>period_msb</td>
+<td>uint8_t</td>
+<td>0</td>
+<td>255</td>
+<td>3</td>
+</tr>
+</tbody>
+</table>
 <p>Total Bytes: 3</p>
 <hr>
 <h2 id="messages-sent">Messages Sent</h2>
 <h3 id="wifi-status">WiFi Status</h3>
 <p>Purpose: Send WiFi connection status.</p>
-<p>Byte | Variable Name | Type | Min | Max | Example
-1 | message_type | uint8_t | 1 | 255 | 11
-2 | wifi_connected | uint8_t | 0 | 1 | 1
-3 | signal_strength | int8_t | -100 | 0 | -62</p>
+<table>
+<thead>
+<tr>
+<th>Byte</th>
+<th>Variable Name</th>
+<th>Type</th>
+<th>Min</th>
+<th>Max</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>message_type</td>
+<td>uint8_t</td>
+<td>1</td>
+<td>255</td>
+<td>11</td>
+</tr>
+<tr>
+<td>2</td>
+<td>wifi_connected</td>
+<td>uint8_t</td>
+<td>0</td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>3</td>
+<td>signal_strength</td>
+<td>int8_t</td>
+<td>-100</td>
+<td>0</td>
+<td>-62</td>
+</tr>
+</tbody>
+</table>
 <p>Total Bytes: 3</p>
 <hr>
 <h3 id="move-scope">Move Scope</h3>
 <p>Purpose: Command motors to move telescope.</p>
-<p>Byte | Variable Name | Type | Min | Max | Example
-1 | message_type | uint8_t | 1 | 255 | 14
-2-3 | motor_x | int16_t | -255 | 255 | 80
-4-5 | motor_y | int16_t | -255 | 255 | -60</p>
+<table>
+<thead>
+<tr>
+<th>Byte</th>
+<th>Variable Name</th>
+<th>Type</th>
+<th>Min</th>
+<th>Max</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>message_type</td>
+<td>uint8_t</td>
+<td>1</td>
+<td>255</td>
+<td>14</td>
+</tr>
+<tr>
+<td>2-3</td>
+<td>motor_x</td>
+<td>int16_t</td>
+<td>-255</td>
+<td>255</td>
+<td>80</td>
+</tr>
+<tr>
+<td>4-5</td>
+<td>motor_y</td>
+<td>int16_t</td>
+<td>-255</td>
+<td>255</td>
+<td>-60</td>
+</tr>
+</tbody>
+</table>
 <p>Total Bytes: 5</p>
 <hr>
 <h3 id="data-received-acknowledgement">Data Received Acknowledgement</h3>
 <p>Purpose: Confirm valid message reception.</p>
-<p>Byte | Variable Name | Type | Min | Max | Example
-1 | message_type | uint8_t | 1 | 255 | 15
-2 | received_type | uint8_t | 1 | 255 | 14
-3 | status_code | uint8_t | 0 | 255 | 1</p>
+<table>
+<thead>
+<tr>
+<th>Byte</th>
+<th>Variable Name</th>
+<th>Type</th>
+<th>Min</th>
+<th>Max</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>message_type</td>
+<td>uint8_t</td>
+<td>1</td>
+<td>255</td>
+<td>15</td>
+</tr>
+<tr>
+<td>2</td>
+<td>received_type</td>
+<td>uint8_t</td>
+<td>1</td>
+<td>255</td>
+<td>14</td>
+</tr>
+<tr>
+<td>3</td>
+<td>status_code</td>
+<td>uint8_t</td>
+<td>0</td>
+<td>255</td>
+<td>1</td>
+</tr>
+</tbody>
+</table>
 <p>Total Bytes: 3</p>
 <hr>
 <h3 id="display-data-on-oled">Display Data on OLED</h3>
 <p>Purpose: Send display values.</p>
-<p>Byte | Variable Name | Type | Min | Max | Example
-1 | message_type | uint8_t | 1 | 255 | 17
-2-3 | display_x | int16_t | -1000 | 1000 | 120
-4-5 | display_y | int16_t | -1000 | 1000 | -45
-6 | status_flags | uint8_t | 0 | 255 | 3</p>
+<table>
+<thead>
+<tr>
+<th>Byte</th>
+<th>Variable Name</th>
+<th>Type</th>
+<th>Min</th>
+<th>Max</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>message_type</td>
+<td>uint8_t</td>
+<td>1</td>
+<td>255</td>
+<td>17</td>
+</tr>
+<tr>
+<td>2-3</td>
+<td>display_x</td>
+<td>int16_t</td>
+<td>-1000</td>
+<td>1000</td>
+<td>120</td>
+</tr>
+<tr>
+<td>4-5</td>
+<td>display_y</td>
+<td>int16_t</td>
+<td>-1000</td>
+<td>1000</td>
+<td>-45</td>
+</tr>
+<tr>
+<td>6</td>
+<td>status_flags</td>
+<td>uint8_t</td>
+<td>0</td>
+<td>255</td>
+<td>3</td>
+</tr>
+</tbody>
+</table>
 <p>Total Bytes: 6</p>
 <hr>
 <h2 id="receive-handling">Receive Handling</h2>
 <p>My receiver processes all incoming UART messages.</p>
 <ul>
-<li>Messages addressed to me are parsed and handled</li>
-<li>Messages for other subsystems are forwarded unchanged</li>
-<li>Messages originating from my own sender are discarded</li>
-<li>Oversized messages are ignored</li>
-<li>Malformed messages are ignored</li>
+<li>Messages addressed to me are parsed and handled  </li>
+<li>Messages for other subsystems are forwarded unchanged  </li>
+<li>Messages originating from my own sender are discarded  </li>
+<li>Oversized messages are ignored  </li>
+<li>Malformed messages are ignored  </li>
 </ul>
 <p>A valid message triggers an acknowledgement containing:
-- message type
-- received data</p>
+- message type<br>
+- received data  </p>
 <hr>
 <h2 id="send-handling">Send Handling</h2>
 <p>My sender constructs valid UART packets.</p>
 <ul>
-<li>Includes correct framing bytes</li>
-<li>Uses valid sender and receiver IDs</li>
-<li>Ensures message size is within limits</li>
-<li>Prevents malformed data</li>
+<li>Includes correct framing bytes  </li>
+<li>Uses valid sender and receiver IDs  </li>
+<li>Ensures message size is within limits  </li>
+<li>Prevents malformed data  </li>
 </ul>
 <p>The sender:
-- Sends example messages with changing values
-- Prioritizes forwarding received messages
-- Uses non blocking timing for transmission</p>
+- Sends example messages with changing values<br>
+- Prioritizes forwarding received messages<br>
+- Uses non blocking timing for transmission  </p>
 <hr>
 <h2 id="testing-notes">Testing Notes</h2>
 <ul>
-<li>Each message type can be verified through UART output</li>
-<li>Acknowledgements confirm correct parsing</li>
-<li>Invalid messages are ignored without response</li>
-<li>Loop timing ensures periodic updates without blocking</li>
+<li>Each message type can be verified through UART output  </li>
+<li>Acknowledgements confirm correct parsing  </li>
+<li>Invalid messages are ignored without response  </li>
+<li>Loop timing ensures periodic updates without blocking  </li>
 </ul>
 <hr>
 
