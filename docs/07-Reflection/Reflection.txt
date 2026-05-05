@@ -8,22 +8,45 @@ Overall, the module was successful in meeting the main design goals. The ESP32-S
 
 The power system using the AMS1117 regulator was able to provide a stable 3.3V supply for the ESP32 module and supporting components. Throughout the design process, schematic development, PCB routing, and design rule checks helped ensure the board could realistically be manufactured and assembled.
 
+---
+
 ## Version 2.0
 
 If the design were to be improved in a future version, several changes could be made. One improvement would be using a switching regulator instead of a linear regulator to improve efficiency and reduce heat when higher input voltages are used. Another improvement would be optimizing the PCB layout further to shorten signal traces and improve routing organization.
 
-Additional connectors could also be added to make it easier to connect external sensors or other subsystems. Expanding the communication interfaces such as SPI or I2C could allow the system to support more devices in the future.
+Additional connectors and header pins could be added to make it easier to connect to the ESP32 without soldering wires directly to the module. This would improve usability and reduce the risk of damaging the board during testing. Expanding the communication interfaces such as SPI or I2C could also allow the system to support more devices in the future.
+
+---
+
+## Microcontroller / Module Startup Tips
+
+- Verify correct pin assignments before writing or uploading code  
+- Start with a simple test program to confirm the board powers on correctly  
+- Use serial output to debug early issues  
+- Ensure a stable 3.3V supply before powering the ESP32  
+- Double check wiring connections before running the system  
+
+---
 
 ## Lessons Learned
 
-1. Careful schematic planning makes the PCB design process much easier later on.
-2. Running design rule checks frequently helps catch mistakes early before routing becomes complicated.
-3. Component placement has a big impact on how easy the board is to route.
-4. Power supply design is important for microcontrollers like the ESP32 that can draw higher current during wireless communication.
+1. Careful schematic planning makes the PCB design process much easier later on.  
+2. Running design rule checks frequently helps catch mistakes early before routing becomes complicated.  
+3. Component placement has a big impact on how easy the board is to route.  
+4. Power supply design is important for microcontrollers like the ESP32 that can draw higher current during wireless communication.  
+5. Debugging hardware issues takes more time than expected and requires patience.  
+6. Keeping connections organized helps reduce mistakes during testing.  
+7. Small errors in wiring or layout can cause major system failures.  
+8. Planning ahead saves time during later stages of the project.  
+9. Testing individual parts of the system makes it easier to identify problems.  
+10. Good documentation helps track progress and simplifies troubleshooting.  
+
+---
 
 ## Recommendations for Future Students
 
-1. Start the schematic early and verify all component footprints before beginning the PCB layout.
-2. Leave enough space around modules like the ESP32 that require antenna keep-out regions.
-3. Run ERC and DRC checks often while designing to avoid large numbers of errors later.
-4. Keep traces organized and avoid unnecessary crossings to make the layout cleaner and easier to debug.
+1. Start the schematic early and verify all component footprints before beginning the PCB layout to avoid redesign later.  
+2. Leave enough space around modules like the ESP32 that require antenna keep-out regions for proper wireless performance.  
+3. Run ERC and DRC checks often while designing to avoid large numbers of errors later.  
+4. Keep traces organized and avoid unnecessary crossings to make the layout cleaner and easier to debug.  
+5. Test each subsystem step by step instead of building everything at once to make debugging easier.  
