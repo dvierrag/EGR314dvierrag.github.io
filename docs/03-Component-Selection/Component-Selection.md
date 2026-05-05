@@ -49,6 +49,13 @@ UART was selected as the communication interface between the ESP32 WiFi subsyste
 
 
 
+**Updated Component Selection (Final Design):** 
+
+Since the initial post the rest of the design has been tweaked and improved. The power supply has been updated to a TPS62162 buck converter in this video to provide an efficient and low heat 3.3 V supply to the rest of the design for WiFi uplink.
+
+We decided to keep things as simple as possible and used the ESP32 S3 WROOM board as the main controller to read in the data and send it wirelessly.
+For inter-subsystem communication, UART was chosen because it requires fewer pins than binary data transfer and is easier to debug.
+The corresponding updates have been made to the block diagram, and a description of the new communication structure has been added to the design. The final design meets all of the stated requirements (persistent power, successful communication, and ease of integration). I will report the WiFi status to Roshan as requested.
 
 -----------
 
