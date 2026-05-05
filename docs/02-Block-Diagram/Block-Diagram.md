@@ -18,3 +18,12 @@ Showing an example of how to import a screenshot of the block diagram created ou
 
 
 <img width="682" height="652" alt="Block Diagram drawio" src="https://github.com/user-attachments/assets/b4e46c29-78bd-4bb9-a72a-017da6f5ca23" />
+
+
+
+
+## Decision Making Process
+
+This WiFi subsystem is simple, reliable and easy to interface with other boards. It uses an ESP32 Wroom to connect to WiFi and then handle messages in the form of MQTT messages sent between the connected boards to update statuses. Power for the PCB is fed through the barrel jack on the bottom right and follows the main power rail down to the PCB edge where it passes through a 3.3 V regulator to safely supply power to the ESP32.
+
+This block diagram details how all of the different features of the PCB meet the product requirements. The Power section shows how the PCB is powered as well as how it connects to other boards on the field. The Communication section shows how the WiFi subsystem is able to communicate with the rest of the team as well as with Dylan and Quinn's boards. The Board Connections section detail the decoupling capacitors and 3.3 V power supply required for the board. Overall, the PCB meets the requirement for reliable wireless communication in a highly organized and testable manner.
