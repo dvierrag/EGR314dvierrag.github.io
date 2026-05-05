@@ -12,10 +12,10 @@
         <link rel="canonical" href="https://embedded-systems-design.github.io/EGR314DataSheetTemplate/08-API/">
       
       
-        <link rel="prev" href="..">
+        <link rel="prev" href="../05-Schematic/schematic/">
       
       
-        <link rel="next" href="../01-Requirements/Requirements/">
+        <link rel="next" href="../Appendix/">
       
       
       <link rel="icon" href="../static/logo314.png">
@@ -26,7 +26,7 @@
 
     
       
-        <title>Message API – Telescope System - EGR 314 Data Sheet Template</title>
+        <title>Index - EGR 314 Data Sheet Template</title>
       
     
     
@@ -89,11 +89,6 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
-        
-        <a href="#message-api-telescope-system" class="md-skip">
-          Skip to content
-        </a>
-      
     </div>
     <div data-md-component="announce">
       
@@ -125,7 +120,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Message API – Telescope System
+              Index
             
           </span>
         </div>
@@ -215,10 +210,8 @@
         
   
   
-    
   
-  
-    <li class="md-tabs__item md-tabs__item--active">
+    <li class="md-tabs__item">
       <a href="./" class="md-tabs__link">
         
   
@@ -334,6 +327,28 @@
         
   
   
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="./" class="md-tabs__link">
+          
+  
+    
+  
+  08 API
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
   
     
     
@@ -425,30 +440,10 @@
       
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  <span class="md-ellipsis">
-    Message API – Telescope System
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="./" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -457,143 +452,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
-      
-        <li class="md-nav__item">
-  <a href="#overview" class="md-nav__link">
-    <span class="md-ellipsis">
-      Overview
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#message-type-definitions" class="md-nav__link">
-    <span class="md-ellipsis">
-      Message Type Definitions
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#message-type-1-wifi-signal-received" class="md-nav__link">
-    <span class="md-ellipsis">
-      Message Type 1 – WiFi Signal Received
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#message-type-2-set-data-receiver" class="md-nav__link">
-    <span class="md-ellipsis">
-      Message Type 2 – Set Data Receiver
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#message-type-3-print-user-input" class="md-nav__link">
-    <span class="md-ellipsis">
-      Message Type 3 – Print User Input
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#message-type-4-translate-coordinates" class="md-nav__link">
-    <span class="md-ellipsis">
-      Message Type 4 – Translate Coordinates
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#message-type-5-if-used-in-system" class="md-nav__link">
-    <span class="md-ellipsis">
-      Message Type 5 – (If Used in System)
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#message-type-6-power-button" class="md-nav__link">
-    <span class="md-ellipsis">
-      Message Type 6 – Power Button
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#message-type-7-set-motor-x-y" class="md-nav__link">
-    <span class="md-ellipsis">
-      Message Type 7 – Set Motor X, Y
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#message-type-8-subsystem-control" class="md-nav__link">
-    <span class="md-ellipsis">
-      Message Type 8 – Subsystem Control
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#receive-handling" class="md-nav__link">
-    <span class="md-ellipsis">
-      Receive Handling
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#send-handling" class="md-nav__link">
-    <span class="md-ellipsis">
-      Send Handling
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#notes" class="md-nav__link">
-    <span class="md-ellipsis">
-      Notes
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -832,6 +690,69 @@
       
   
   
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+    
+    
+      
+        
+        
+      
+      
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" checked="">
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="./" class="md-nav__link md-nav__link--active">
+              
+  
+  <span class="md-ellipsis">
+    08 API
+  </span>
+  
+
+            </a>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_8">
+            <span class="md-nav__icon md-icon"></span>
+            08 API
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix="">
+            
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
   
   
     
@@ -899,133 +820,6 @@
   
   
   
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
-      
-        <li class="md-nav__item">
-  <a href="#overview" class="md-nav__link">
-    <span class="md-ellipsis">
-      Overview
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#message-type-definitions" class="md-nav__link">
-    <span class="md-ellipsis">
-      Message Type Definitions
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#message-type-1-wifi-signal-received" class="md-nav__link">
-    <span class="md-ellipsis">
-      Message Type 1 – WiFi Signal Received
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#message-type-2-set-data-receiver" class="md-nav__link">
-    <span class="md-ellipsis">
-      Message Type 2 – Set Data Receiver
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#message-type-3-print-user-input" class="md-nav__link">
-    <span class="md-ellipsis">
-      Message Type 3 – Print User Input
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#message-type-4-translate-coordinates" class="md-nav__link">
-    <span class="md-ellipsis">
-      Message Type 4 – Translate Coordinates
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#message-type-5-if-used-in-system" class="md-nav__link">
-    <span class="md-ellipsis">
-      Message Type 5 – (If Used in System)
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#message-type-6-power-button" class="md-nav__link">
-    <span class="md-ellipsis">
-      Message Type 6 – Power Button
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#message-type-7-set-motor-x-y" class="md-nav__link">
-    <span class="md-ellipsis">
-      Message Type 7 – Set Motor X, Y
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#message-type-8-subsystem-control" class="md-nav__link">
-    <span class="md-ellipsis">
-      Message Type 8 – Subsystem Control
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#receive-handling" class="md-nav__link">
-    <span class="md-ellipsis">
-      Receive Handling
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#send-handling" class="md-nav__link">
-    <span class="md-ellipsis">
-      Send Handling
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#notes" class="md-nav__link">
-    <span class="md-ellipsis">
-      Notes
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
   
 </nav>
                   </div>
@@ -1040,7 +834,7 @@
                   
 
   
-    <a href="https://github.com/embedded-systems-design/EGR314DataSheetTemplate/edit/main/docs/08-API.md" title="Edit this page" class="md-content__button md-icon">
+    <a href="https://github.com/embedded-systems-design/EGR314DataSheetTemplate/edit/main/docs/08-API/README.md" title="Edit this page" class="md-content__button md-icon">
       
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4v-2m10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1 2.1 2.1Z"></path></svg>
     </a>
@@ -1048,301 +842,9 @@
   
 
 
-<h1 id="message-api-telescope-system">Message API – Telescope System</h1>
-<h2 id="overview">Overview</h2>
-<p>This page defines the UART message API used for communication between subsystems. Each message follows the team-defined protocol and includes byte layout, data types, and descriptions.</p>
-<hr>
-<h2 id="message-type-definitions">Message Type Definitions</h2>
-<table>
-<thead>
-<tr>
-<th>Message Type (uint16_t)</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>1</td>
-<td>WiFi Signal Received</td>
-</tr>
-<tr>
-<td>2</td>
-<td>Set Data Receiver Type (Web or In-person)</td>
-</tr>
-<tr>
-<td>3</td>
-<td>Print User Input</td>
-</tr>
-<tr>
-<td>4</td>
-<td>Translate Coordinate Input to Motor Input</td>
-</tr>
-<tr>
-<td>6</td>
-<td>Power Button Pushed</td>
-</tr>
-<tr>
-<td>7</td>
-<td>Set Motor X, Y</td>
-</tr>
-<tr>
-<td>8</td>
-<td>Set Roshan subsystem On/Off</td>
-</tr>
-</tbody>
-</table>
-<hr>
-<h2 id="message-type-1-wifi-signal-received">Message Type 1 – WiFi Signal Received</h2>
-<table>
-<thead>
-<tr>
-<th>Byte</th>
-<th>Variable Name</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>1-2</td>
-<td>message_type</td>
-<td>uint16_t</td>
-<td>1</td>
-</tr>
-<tr>
-<td>3</td>
-<td>wifi</td>
-<td>uint8_t</td>
-<td>boolean WiFi status</td>
-</tr>
-</tbody>
-</table>
-<hr>
-<h2 id="message-type-2-set-data-receiver">Message Type 2 – Set Data Receiver</h2>
-<table>
-<thead>
-<tr>
-<th>Byte</th>
-<th>Variable Name</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>1-2</td>
-<td>message_type</td>
-<td>uint16_t</td>
-<td>2</td>
-</tr>
-<tr>
-<td>3-58</td>
-<td>data_string</td>
-<td>char[]</td>
-<td>receiver type string</td>
-</tr>
-</tbody>
-</table>
-<hr>
-<h2 id="message-type-3-print-user-input">Message Type 3 – Print User Input</h2>
-<table>
-<thead>
-<tr>
-<th>Byte</th>
-<th>Variable Name</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>1-2</td>
-<td>message_type</td>
-<td>uint16_t</td>
-<td>3</td>
-</tr>
-<tr>
-<td>3-58</td>
-<td>input_string</td>
-<td>char[]</td>
-<td>user input string</td>
-</tr>
-</tbody>
-</table>
-<hr>
-<h2 id="message-type-4-translate-coordinates">Message Type 4 – Translate Coordinates</h2>
-<table>
-<thead>
-<tr>
-<th>Byte</th>
-<th>Variable Name</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>1-2</td>
-<td>message_type</td>
-<td>uint16_t</td>
-<td>4</td>
-</tr>
-<tr>
-<td>3</td>
-<td>x_value</td>
-<td>uint8_t</td>
-<td>X coordinate</td>
-</tr>
-<tr>
-<td>4-5</td>
-<td>y_value</td>
-<td>uint16_t</td>
-<td>Y coordinate</td>
-</tr>
-</tbody>
-</table>
-<hr>
-<h2 id="message-type-5-if-used-in-system">Message Type 5 – (If Used in System)</h2>
-<table>
-<thead>
-<tr>
-<th>Byte</th>
-<th>Variable Name</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>1-2</td>
-<td>message_type</td>
-<td>uint16_t</td>
-<td>5</td>
-</tr>
-<tr>
-<td>3</td>
-<td>x_value</td>
-<td>uint8_t</td>
-<td>X coordinate</td>
-</tr>
-<tr>
-<td>4-5</td>
-<td>y_value</td>
-<td>uint16_t</td>
-<td>Y coordinate</td>
-</tr>
-</tbody>
-</table>
-<hr>
-<h2 id="message-type-6-power-button">Message Type 6 – Power Button</h2>
-<table>
-<thead>
-<tr>
-<th>Byte</th>
-<th>Variable Name</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>1-2</td>
-<td>message_type</td>
-<td>uint16_t</td>
-<td>6</td>
-</tr>
-<tr>
-<td>3</td>
-<td>button</td>
-<td>uint8_t</td>
-<td>boolean button state</td>
-</tr>
-</tbody>
-</table>
-<hr>
-<h2 id="message-type-7-set-motor-x-y">Message Type 7 – Set Motor X, Y</h2>
-<table>
-<thead>
-<tr>
-<th>Byte</th>
-<th>Variable Name</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>1-2</td>
-<td>message_type</td>
-<td>uint16_t</td>
-<td>7</td>
-</tr>
-<tr>
-<td>3</td>
-<td>x_value</td>
-<td>uint8_t</td>
-<td>motor X</td>
-</tr>
-<tr>
-<td>4-5</td>
-<td>y_value</td>
-<td>uint16_t</td>
-<td>motor Y</td>
-</tr>
-</tbody>
-</table>
-<hr>
-<h2 id="message-type-8-subsystem-control">Message Type 8 – Subsystem Control</h2>
-<table>
-<thead>
-<tr>
-<th>Byte</th>
-<th>Variable Name</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>1-2</td>
-<td>message_type</td>
-<td>uint16_t</td>
-<td>8</td>
-</tr>
-<tr>
-<td>3</td>
-<td>subsystemState</td>
-<td>uint8_t</td>
-<td>boolean on or off</td>
-</tr>
-</tbody>
-</table>
-<hr>
-<h2 id="receive-handling">Receive Handling</h2>
-<ul>
-<li>Processes messages addressed to this subsystem  </li>
-<li>Forwards messages not intended for this subsystem  </li>
-<li>Discards messages originating from itself  </li>
-<li>Ignores malformed messages  </li>
-<li>Ignores oversized messages  </li>
-</ul>
-<p>Valid messages trigger an acknowledgement response.</p>
-<hr>
-<h2 id="send-handling">Send Handling</h2>
-<ul>
-<li>Constructs valid UART packets  </li>
-<li>Uses correct message formatting  </li>
-<li>Prevents invalid data sizes  </li>
-<li>Sends example messages for testing  </li>
-<li>Prioritizes forwarding over sending  </li>
-</ul>
-<hr>
-<h2 id="notes">Notes</h2>
-<ul>
-<li>All message types follow team-defined structure  </li>
-<li>Data must stay within defined byte ranges  </li>
-<li>Message formatting must comply with class protocol  </li>
-</ul>
+  <h1>Index</h1>
+
+
 
 
 
@@ -1378,7 +880,7 @@
       <nav class="md-footer__inner md-grid" aria-label="Footer">
         
           
-          <a href=".." class="md-footer__link md-footer__link--prev" aria-label="Previous: Welcome">
+          <a href="../05-Schematic/schematic/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Module Schematic">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"></path></svg>
@@ -1388,20 +890,20 @@
                 Previous
               </span>
               <div class="md-ellipsis">
-                Welcome
+                Module Schematic
               </div>
             </div>
           </a>
         
         
           
-          <a href="../01-Requirements/Requirements/" class="md-footer__link md-footer__link--next" aria-label="Next: Module's Requirements">
+          <a href="../Appendix/" class="md-footer__link md-footer__link--next" aria-label="Next: Appendix - Main Page">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Next
               </span>
               <div class="md-ellipsis">
-                Module's Requirements
+                Appendix - Main Page
               </div>
             </div>
             <div class="md-footer__button md-icon">
