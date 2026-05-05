@@ -9,13 +9,13 @@
       
       
       
-        <link rel="canonical" href="https://embedded-systems-design.github.io/EGR314DataSheetTemplate/02-Block-Diagram/Block-Diagram/">
+        <link rel="canonical" href="https://embedded-systems-design.github.io/EGR314DataSheetTemplate/10-Resources/code_esp32_mqtt/">
       
       
-        <link rel="prev" href="../../01-Requirements/Requirements/">
+        <link rel="prev" href="../">
       
       
-        <link rel="next" href="../../03-Component-Selection/Component-Selection/">
+        <link rel="next" href="licenses/ssd1306/LICENSE/">
       
       
       <link rel="icon" href="../../static/logo314.png">
@@ -26,7 +26,7 @@
 
     
       
-        <title>Module's Block Diagram - EGR 314 Data Sheet Template</title>
+        <title>ESP32 MQTT / UART support code - EGR 314 Data Sheet Template</title>
       
     
     
@@ -90,7 +90,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#overview" class="md-skip">
+        <a href="#esp32-mqtt-uart-support-code" class="md-skip">
           Skip to content
         </a>
       
@@ -125,7 +125,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Module's Block Diagram
+              ESP32 MQTT / UART support code
             
           </span>
         </div>
@@ -235,13 +235,11 @@
         
   
   
-    
-  
   
     
     
-      <li class="md-tabs__item md-tabs__item--active">
-        <a href="./" class="md-tabs__link">
+      <li class="md-tabs__item">
+        <a href="../../02-Block-Diagram/Block-Diagram/" class="md-tabs__link">
           
   
     
@@ -357,11 +355,13 @@
         
   
   
+    
+  
   
     
     
-      <li class="md-tabs__item">
-        <a href="../../10-Resources/" class="md-tabs__link">
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../" class="md-tabs__link">
           
   
     
@@ -514,137 +514,43 @@
       
   
   
-    
   
   
+    
+    
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
   
-    
-    
+  
+    <a href="../../02-Block-Diagram/Block-Diagram/" class="md-nav__link">
       
-        
-      
-    
-    
-      
-        
-        
-      
-      
-    
-    
-      
-    
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
-      
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked="">
-        
-          
-          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
-            
   
   <span class="md-ellipsis">
     02 Block Diagram
   </span>
   
 
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
-          <label class="md-nav__title" for="__nav_3">
-            <span class="md-nav__icon md-icon"></span>
-            02 Block Diagram
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix="">
-            
-              
-                
-  
-  
-    
-  
-  
-  
-    <li class="md-nav__item md-nav__item--active">
       
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+        <span class="md-nav__icon md-icon"></span>
       
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  <span class="md-ellipsis">
-    Module's Block Diagram
-  </span>
+    </a>
   
 
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
-        
-  
-  <span class="md-ellipsis">
-    Module's Block Diagram
-  </span>
-  
-
-      </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
-      
-        <li class="md-nav__item">
-  <a href="#overview" class="md-nav__link">
-    <span class="md-ellipsis">
-      Overview
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#example-block-diagram" class="md-nav__link">
-    <span class="md-ellipsis">
-      Example Block Diagram
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#decision-making-process" class="md-nav__link">
-    <span class="md-ellipsis">
-      Decision Making Process
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
       
     </li>
   
@@ -888,6 +794,8 @@
       
   
   
+    
+  
   
   
     
@@ -896,6 +804,123 @@
         
           
         
+      
+        
+      
+    
+    
+      
+        
+        
+      
+      
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9" checked="">
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    10 Resources
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_9" id="__nav_9_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_9_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_9">
+            <span class="md-nav__icon md-icon"></span>
+            10 Resources
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix="">
+            
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9_2" checked="">
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="./" class="md-nav__link md-nav__link--active">
+              
+  
+  <span class="md-ellipsis">
+    Code esp32 mqtt
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link md-nav__link--active" for="__nav_9_2" id="__nav_9_2_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_9_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_9_2">
+            <span class="md-nav__icon md-icon"></span>
+            Code esp32 mqtt
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix="">
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
       
         
       
@@ -915,11 +940,14 @@
         
   
   
-    <a href="../../10-Resources/" class="md-nav__link">
+    
+  
+  
+    <a href="licenses/ssd1306/LICENSE/" class="md-nav__link">
       
   
   <span class="md-ellipsis">
-    10 Resources
+    Licenses
   </span>
   
 
@@ -929,6 +957,24 @@
     </a>
   
 
+  
+
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
       
     </li>
   
@@ -1005,41 +1051,8 @@
   
   
   
+    
   
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
-      
-        <li class="md-nav__item">
-  <a href="#overview" class="md-nav__link">
-    <span class="md-ellipsis">
-      Overview
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#example-block-diagram" class="md-nav__link">
-    <span class="md-ellipsis">
-      Example Block Diagram
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#decision-making-process" class="md-nav__link">
-    <span class="md-ellipsis">
-      Decision Making Process
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
   
 </nav>
                   </div>
@@ -1054,7 +1067,7 @@
                   
 
   
-    <a href="https://github.com/embedded-systems-design/EGR314DataSheetTemplate/edit/main/docs/02-Block-Diagram/Block-Diagram.md" title="Edit this page" class="md-content__button md-icon">
+    <a href="https://github.com/embedded-systems-design/EGR314DataSheetTemplate/edit/main/docs/10-Resources/code_esp32_mqtt/README.md" title="Edit this page" class="md-content__button md-icon">
       
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4v-2m10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1 2.1 2.1Z"></path></svg>
     </a>
@@ -1062,26 +1075,21 @@
   
 
 
-  <h1>Module's Block Diagram</h1>
-
-<h2 id="overview">Overview</h2>
-<p>This block diagram shows the overall system architecture for the WiFi subsystem. Power enters the system through a barrel jack and is regulated to 3.3 V for the ESP32 Wroom module. The ESP32 serves as the main controller and manages communication using WiFi and MQTT. The diagram also shows upstream and downstream connections used to communicate with other team components. This diagram provides a high level understanding of how the power system, controller, and communication interfaces interact within the design.</p>
-<p>To get some initial formatting help, one can view <a href="https://embedded-systems-design.github.io/EGR304DataSheetTemplate/Appendix/basic-markdown-examples/">"here"</a> some basic techniques.</p>
-<h2 id="example-block-diagram">Example Block Diagram</h2>
-<p>Showing an example of how to import a screenshot of the block diagram created outside of git and brought into a page.</p>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="https://github.com/user-attachments/assets/b4e46c29-78bd-4bb9-a72a-017da6f5ca23" data-desc-position="bottom"><img width="682" height="652" alt="Block Diagram drawio" src="https://github.com/user-attachments/assets/b4e46c29-78bd-4bb9-a72a-017da6f5ca23"></a></p>
-<h2 id="decision-making-process">Decision Making Process</h2>
-<p>This WiFi subsystem is simple, reliable and easy to interface with other boards. It uses an ESP32 Wroom to connect to WiFi and then handle messages in the form of MQTT messages sent between the connected boards to update statuses. Power for the PCB is fed through the barrel jack on the bottom right and follows the main power rail down to the PCB edge where it passes through a 3.3 V regulator to safely supply power to the ESP32.</p>
-<p>This block diagram details how all of the different features of the PCB meet the product requirements. The Power section shows how the PCB is powered as well as how it connects to other boards on the field. The Communication section shows how the WiFi subsystem is able to communicate with the rest of the team as well as with Dylan and Quinn's boards. The Board Connections section detail the decoupling capacitors and 3.3 V power supply required for the board. Overall, the PCB meets the requirement for reliable wireless communication in a highly organized and testable manner.</p>
+<h1 id="esp32-mqtt-uart-support-code">ESP32 MQTT / UART support code</h1>
+<p>This code is shared as part of the Embedded Systems Design course at Arizona State University.</p>
+<p>Various parts of the code have been derived from the following:</p>
+<ul>
+<li><a href="https://github.com/peterhinch/micropython-async/blob/master/v3/as_demos/auart.py">https://github.com/peterhinch/micropython-async/blob/master/v3/as_demos/auart.py</a></li>
+<li><a href="https://github.com/tve/mqboard/blob/master/mqtt_async/hello-world.py">https://github.com/tve/mqboard/blob/master/mqtt_async/hello-world.py</a></li>
+<li><a href="https://github.com/peterhinch/micropython-mqtt">https://github.com/peterhinch/micropython-mqtt</a></li>
+<li><a href="https://github.com/embedded-systems-design/external_pycopy-lib">https://github.com/embedded-systems-design/external_pycopy-lib</a></li>
+</ul>
 
 
 
 
 
 
-
-  
-  
 
 
 
@@ -1111,7 +1119,7 @@
       <nav class="md-footer__inner md-grid" aria-label="Footer">
         
           
-          <a href="../../01-Requirements/Requirements/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Module's Requirements">
+          <a href="../" class="md-footer__link md-footer__link--prev" aria-label="Previous: Index">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"></path></svg>
@@ -1121,20 +1129,20 @@
                 Previous
               </span>
               <div class="md-ellipsis">
-                Module's Requirements
+                Index
               </div>
             </div>
           </a>
         
         
           
-          <a href="../../03-Component-Selection/Component-Selection/" class="md-footer__link md-footer__link--next" aria-label="Next: Module's Selected Major Components">
+          <a href="licenses/ssd1306/LICENSE/" class="md-footer__link md-footer__link--next" aria-label="Next: LICENSE">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Next
               </span>
               <div class="md-ellipsis">
-                Module's Selected Major Components
+                LICENSE
               </div>
             </div>
             <div class="md-footer__button md-icon">
