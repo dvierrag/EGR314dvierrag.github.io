@@ -26,7 +26,7 @@
 
     
       
-        <title>Index - EGR 314 Data Sheet Template</title>
+        <title>Hardware V2.0 - EGR 314 Data Sheet Template</title>
       
     
     
@@ -89,6 +89,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#hardware-v20" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -120,7 +125,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Index
+              Hardware V2.0
             
           </span>
         </div>
@@ -919,6 +924,79 @@
   
   
   
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+      
+        <li class="md-nav__item">
+  <a href="#overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      Overview
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#power-system-improvements" class="md-nav__link">
+    <span class="md-ellipsis">
+      Power System Improvements
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pcb-layout-improvements" class="md-nav__link">
+    <span class="md-ellipsis">
+      PCB Layout Improvements
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#component-selection-improvements" class="md-nav__link">
+    <span class="md-ellipsis">
+      Component Selection Improvements
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#microcontroller-and-connectivity" class="md-nav__link">
+    <span class="md-ellipsis">
+      Microcontroller and Connectivity
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mechanical-and-assembly-improvements" class="md-nav__link">
+    <span class="md-ellipsis">
+      Mechanical and Assembly Improvements
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#conclusion" class="md-nav__link">
+    <span class="md-ellipsis">
+      Conclusion
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
   
 </nav>
                   </div>
@@ -941,9 +1019,39 @@
   
 
 
-  <h1>Index</h1>
-
-
+<h1 id="hardware-v20">Hardware V2.0</h1>
+<h2 id="overview">Overview</h2>
+<p>If I were to redesign my hardware system as Version 2.0, I would focus on improving reliability, power efficiency, and ease of assembly. While the current design meets the functional requirements, there are several areas where the hardware could be optimized to perform better and be more user friendly.</p>
+<h2 id="power-system-improvements">Power System Improvements</h2>
+<p>One of the main improvements would be redesigning the power system. The current design uses a basic voltage regulator, which can lead to inefficiencies and heat generation. In Version 2.0, I would replace the linear regulator with a switching regulator to improve efficiency and reduce power loss.</p>
+<p>I would also improve power stability by adding decoupling capacitors near key components such as the microcontroller and motor driver. This would help reduce electrical noise and ensure more stable operation, especially when the motor is running.</p>
+<h2 id="pcb-layout-improvements">PCB Layout Improvements</h2>
+<p>The PCB layout can be improved to enhance both performance and usability. In the current design, some traces may be longer than necessary. In Version 2.0, I would:
+- Shorten critical signal paths<br>
+- Use wider traces for power lines<br>
+- Add a solid ground plane<br>
+- Add extra header pins for the ESP32 to allow easy access to GPIO without needing to solder wires directly to the module  </p>
+<p>Adding extra header pins would make the design more user friendly, simplify debugging, and reduce the risk of damaging the ESP32 during assembly or testing.</p>
+<h2 id="component-selection-improvements">Component Selection Improvements</h2>
+<p>Some components in the current design were selected based on availability rather than performance. In Version 2.0, I would:
+- Choose a more efficient motor driver<br>
+- Select a regulator that better matches voltage and current needs<br>
+- Use smaller components to reduce overall board size  </p>
+<p>This would make the design more efficient and compact.</p>
+<h2 id="microcontroller-and-connectivity">Microcontroller and Connectivity</h2>
+<p>The microcontroller setup can also be improved. In Version 2.0, I would:
+- Add clear pin labeling on the PCB<br>
+- Include test points for debugging<br>
+- Improve connector placement for easier access  </p>
+<p>If using an ESP32, I would also improve antenna placement to ensure better wireless performance.</p>
+<h2 id="mechanical-and-assembly-improvements">Mechanical and Assembly Improvements</h2>
+<p>The physical design can be improved to make assembly easier and increase durability. In Version 2.0, I would:
+- Add better mounting hole placement<br>
+- Use stronger connectors<br>
+- Clearly label inputs and outputs  </p>
+<p>If the system uses an enclosure, I would redesign it to provide better protection and usability.</p>
+<h2 id="conclusion">Conclusion</h2>
+<p>Version 2.0 of the hardware would focus on improving efficiency, reliability, and usability. By refining the power system, PCB layout, component selection, and physical design, the next version would result in a more polished and higher performing system.</p>
 
 
 
